@@ -1,0 +1,45 @@
+{
+  "name": "za-co-mme-ml-util",
+  "version": "0.0.1-dev",
+  "description": "ML Utilities for android",
+  "cordova": {
+    "id": "za-co-mme-ml-util",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:corova"
+  ],
+  "devDependencies": {
+    "jasmine-node": "1.14.5",
+    "pluginpub": "^0.0.9"
+  },
+  "scripts": {
+    "test": "jasmine-node --color spec"
+  },
+  "engines": {
+    "cordovaDependencies": {
+      "<7.0.0": {
+        "cordova-android": "<6.3.0"
+      },
+      "7.0.0": {
+        "cordova-android": ">=6.3.0"
+      },
+      "7.1.0": {
+        "cordova-android": ">=6.3.0",
+        "cordova": ">=7.1.0"
+      },
+      "8.0.0": {
+        "cordova-android": ">=6.3.0",
+        "cordova": ">=7.1.0"
+      }
+    }
+  },
+  "dependencies": {
+    "nopt": "^4.0.1",
+    "shelljs": "^0.8.3"
+  },
+  "author": "MMEZA",
+  "license": "MIT"
+}

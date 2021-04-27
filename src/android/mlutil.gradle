@@ -1,0 +1,17 @@
+repositories{
+    jcenter()
+    flatDir{
+        dirs 'libs'
+    }
+}
+dependencies {
+      // ...
+      // Use this dependency to use the dynamically downloaded model in Google Play Services
+      implementation 'com.google.android.gms:play-services-mlkit-barcode-scanning:16.1.4'
+}
+android {
+    packagingOptions {
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+    }
+}

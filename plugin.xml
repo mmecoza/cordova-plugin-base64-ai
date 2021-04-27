@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:rim="http://www.blackberry.com/ns/widgets" id="cordova-plugin-ml-util" version="0.0.1-dev">
+    <name>MLUtil</name>
+  <description>ML Utilities for android</description>
+  <license>MIT</license>
+  <!-- <repo>https://github.com/phonegap/phonegap-plugin-barcodescanner</repo>
+  <issue>https://github.com/phonegap/phonegap-plugin-barcodescanner/issues</issue> -->
+  <engines>
+    <engine name="cordova" version=">=7.1.0"/>
+    <engine name="cordova-android" version=">=6.3.0"/>
+  </engines>
+  <js-module src="www/MLUtil.js" name="MLUtil">
+    <clobbers target="cordova.plugins.mlutil"/>
+  </js-module>
+  <platform name="android">
+    <source-file src="src/android/za/co/mme/mlutil/MLUtils.java" target-dir="src/za/co/mme/mlutil"/>
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="MLUtils">
+        <param name="android-package" value="za.co.mme.mlutil.MLUtils"/>
+      </feature>
+    </config-file>
+    <config-file target="AndroidManifest.xml" parent="/manifest">
+        <meta-data
+              android:name="com.google.mlkit.vision.DEPENDENCIES"
+              android:value="barcode" />
+    </config-file>
+    <framework src="src/android/mlutil.gradle" custom="true" type="gradleReference"/>
+    <!-- <framework src="com.android.support:support-v4:$ANDROID_SUPPORT_V4_VERSION"/> -->
+    <!-- <lib-file src="src/android/barcodescanner-release-2.1.5.aar"/> -->
+    <preference name="ANDROID_SUPPORT_V4_VERSION" default="27.+"/>
+  </platform>
+</plugin>
