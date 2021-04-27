@@ -9,11 +9,11 @@
     ]
   },
   "keywords": [
-    "ecosystem:corova"
+    "ecosystem:cordova"
   ],
   "devDependencies": {
-    "jasmine-node": "1.14.5",
-    "pluginpub": "^0.0.9"
+    "jasmine-node": "^3.0.0",
+    "pluginpub": "^5.1.1"
   },
   "scripts": {
     "test": "jasmine-node --color spec"
