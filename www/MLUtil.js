@@ -14,18 +14,37 @@ var scanInProgress = false;
 function MLUtil() {
 
 }
-
+/**
+ * 
+ * 
+ * @param {function} successCallback  
+ * @param {function} errorCallback
+ * @param {String} data 
+ */
 MLUtil.prototype.decode = function fun(successCallback, errorCallback, data) {
-    if (typeof successCallback != 'Function') {
+    if (typeof successCallback !== 'function') {
         console.log('User did not set success callback');
         return;
     }
-    if (typeof errorCallback != 'Function') {
+    if (typeof errorCallback !== 'function') {
         console.log('User did not set error callback');
         return;
     }
     exec(successCallback, errorCallback,  'MLUtils', 'decode', [{data}]);  
 }
+
+MLUtil.prototype.recognizeText = function fun(successCallback, errorCallback, data) {
+    if (typeof successCallback !== 'function') {
+        console.log('User did not set success callback');
+        return;
+    }
+    if (typeof errorCallback !== 'function') {
+        console.log('User did not set error callback');
+        return;
+    }
+    exec(successCallback, errorCallback,  'MLUtils', 'recognize', [{data}]);  
+}
+
 
 var mlutil = new MLUtil();
 module.exports = mlutil;
