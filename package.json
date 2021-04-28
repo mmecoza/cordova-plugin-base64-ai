@@ -1,7 +1,7 @@
 {
   "name": "za-co-mme-ml-util",
   "version": "0.0.1-dev",
-  "description": "ML Utilities for android",
+  "description": "ML Utilities for android, Barcode Recognition and Text Recognition",
   "cordova": {
     "id": "za-co-mme-ml-util",
     "platforms": [
@@ -9,14 +9,16 @@
     ]
   },
   "keywords": [
-    "ecosystem:cordova"
+    "ecosystem:cordova",
+    "ML-Kit",
+    "Artificial-Intelligence",
+    "Android"
   ],
   "devDependencies": {
     "jasmine-node": "^3.0.0",
     "pluginpub": "^5.1.1"
   },
   "scripts": {
-    "test": "jasmine-node --color spec"
   },
   "engines": {
     "cordovaDependencies": {
